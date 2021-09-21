@@ -8,6 +8,7 @@ const TodoItem = (props) => {
   const {
     id, title, completed, handleChangeProps, deleteTodoProps, setUpdate,
   } = props;
+  console.log(styles.item);
 
   const handleEditing = () => {
     setEditing(true);
@@ -63,6 +64,7 @@ const TodoItem = (props) => {
           setUpdate(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
+        onBlur={() => setEditing(false)}
       />
     </li>
   );
