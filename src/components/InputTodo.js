@@ -10,7 +10,7 @@ const InputTodo = ({ addTodoProps }) => {
   const onChangeHandler = (e) => {
     setInputText({
       ...inputText,
-      [e.target.name]: e.target.value,
+      title: e.target.value,
     });
   };
 
@@ -21,8 +21,6 @@ const InputTodo = ({ addTodoProps }) => {
       setInputText({
         title: '',
       });
-    } else {
-      alert('Please enter a To-Do Task');
     }
   };
 
